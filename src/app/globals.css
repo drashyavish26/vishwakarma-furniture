@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-espresso;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-champagne text-espresso font-semibold px-6 py-3 rounded-sm hover:bg-champagne-dark transition-colors duration-200 inline-flex items-center gap-2;
+  }
+  .btn-secondary {
+    @apply border-2 border-espresso text-espresso font-semibold px-6 py-3 rounded-sm hover:bg-espresso hover:text-cream transition-colors duration-200 inline-flex items-center gap-2;
+  }
+  .btn-whatsapp {
+    @apply bg-green-500 text-white font-semibold px-5 py-2.5 rounded-sm hover:bg-green-600 transition-colors duration-200 inline-flex items-center gap-2 text-sm;
+  }
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  .skeleton {
+    @apply animate-pulse bg-cream-secondary rounded;
+  }
+  .admin-input {
+    @apply w-full border border-cream-secondary rounded-sm px-3 py-2 text-espresso bg-white focus:outline-none focus:ring-2 focus:ring-champagne focus:border-transparent transition-all;
+  }
+  .admin-label {
+    @apply block text-sm font-medium text-espresso mb-1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F0EAE1; }
+::-webkit-scrollbar-thumb { background: #8B5A2B; border-radius: 3px; }
